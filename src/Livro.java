@@ -2,8 +2,9 @@ public class Livro {
     private String nome;
     private String descricao;
     private double valor;
-    private String isbn;
     private Autor autor;
+    private String isbn;
+
     private boolean impressao;
 
     public Livro(){
@@ -14,6 +15,14 @@ public class Livro {
         this();
         this.autor = autor;
         this.impressao = true;
+    }
+
+    public Autor getAutor() {
+        return autor;
+    }
+
+    public void setAutor(Autor autor) {
+        this.autor = autor;
     }
 
     public String getNome() {
@@ -48,13 +57,6 @@ public class Livro {
         this.isbn = isbn;
     }
 
-    public Autor getAutor() {
-        return autor;
-    }
-
-    public void setAutor(Autor autor) {
-        this.autor = autor;
-    }
 
     void mostrarDetalhe(){
         System.out.println("Mostrando detalhes do livro");
@@ -62,9 +64,11 @@ public class Livro {
         System.out.println("Descricao: " + descricao);
         System.out.println("Valor: " + valor);
         System.out.println("ISBN: " + isbn);
+
         if (this.temAutor()){
             autor.mostrarDetalhes();
         }
+
         System.out.println("--");
     }
 
@@ -83,7 +87,6 @@ public class Livro {
     boolean temAutor(){
         return this.autor != null;
     }
-
 
 }
 

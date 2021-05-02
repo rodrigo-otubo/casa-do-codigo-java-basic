@@ -1,5 +1,6 @@
 public class CadastroDeLivros {
     public static void main(String[] args) {
+
         Autor autor = new Autor();
         autor.setNome("Rodrigo Turini");
         autor.setEmail("rodrigo.turini@caelum.com.br");
@@ -25,7 +26,7 @@ public class CadastroDeLivros {
         outroLivro.setValor(59.90);
         outroLivro.setIsbn("978-85-66250-46-6");
 
-        //outroLivro.setAutor(outroAutor);
+        outroLivro.setAutor(outroAutor);
         outroLivro.mostrarDetalhe();
     }
 }
